@@ -2,17 +2,11 @@ import sys
 def T():
     t=int(input())
     while t>0:
-        sys.stdout.flush()
-
         a, b = [int(x) for x in input().split()]
         a,b=a+1,b+1
         N=int(input())
         for i in range(0,N+1):
-           print(int((a+b)//2),"\n")
-           if(a==b):
-                    print("WRONG_ANSWER")
-                    sys.exit()
-           sys.stdout.flush()
+           print(int((a+b)//2),flush=True)
            s=input().strip()
            if(s=="CORRECT"):
                break
@@ -23,7 +17,7 @@ def T():
                   
 
                else:
-                   if(s=="TOO_LARGE"):
+                   if(s=="TOO_BIG"):
                        
                        b=int((a+b)//2)
                        
