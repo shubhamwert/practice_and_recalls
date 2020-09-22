@@ -11,23 +11,29 @@
 // print a single integer denoting the answer.
 #include<bits/stdc++.h>
 #include <numeric>
+#define fast ios::sync_with_stdio(false);cin.tie(NULL);
 using namespace std;
 int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    fast;
     long long int n,q,r,l;
-    cin>>n>>q;
-    
-    long long int a[n];
-    for(int i=0;i<n;i++){
-        cin>>a[i];
+    // cin>>n>>q;
+    scanf("%lld %lld",&n,&q);
+    long long int sum[n+1];
+    long long int a=0;
+    sum[0]=0;
+     
+    for(int i=1;i<=n;i++){
+        scanf("%lld",&a);
+         
+        sum[i]=sum[i-1]+a;
     }
     
+      
+    while(q>0){r=0;l=0;
     
-    while(q){r=0;l=0;
-        cin>>l>>r;
-        int initial_sum  = 0;
-        cout<<accumulate(a+l-1,a+r,initial_sum)/(r-l+1)<<"\n";
+        scanf("%lld %lld",&l,&r);
+         
+        printf("%lld\n",(sum[r]-sum[l-1])/(r-l+1));
         q--;
     }
 
