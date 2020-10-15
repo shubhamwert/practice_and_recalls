@@ -10,6 +10,8 @@
         "cstddef": "cpp",
         "iomanip": "cpp",
         "istream": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp"
     }
 }
