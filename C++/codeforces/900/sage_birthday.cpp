@@ -1,6 +1,6 @@
 #include<iostream>
 #include<list>
-
+#include<bits/stdc++.h>
 using namespace std;
 
 
@@ -14,6 +14,7 @@ int main(){
     int a[n];
     int counter=0;
     for(int i=0;i<n;i++){cin>>a[i];}
+    sort(a,a+n);
     v.push_back(a[n-1]);
     while(l<r){
             if(!(counter%2==0)){
